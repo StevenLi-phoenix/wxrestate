@@ -138,6 +138,8 @@ def main():
                                 chat.SendMsg("当前处于猫娘代理回复模式")
                             else:
                                 chat.SendMsg("当前处于手动回复模式")
+                        elif "restart" in content.lower():
+                            raise Exception("重启程序")
                     elif content.startswith("@execute"):
                         content = content.replace("@execute", "")
                         try:
